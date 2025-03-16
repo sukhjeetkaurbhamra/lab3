@@ -1,0 +1,91 @@
+/* app.css */
+
+.custom-navbar {
+    background: linear-gradient(to right, #1a1a1a, #2200ff);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+.nav-link.active::after {
+    width: 80%;
+    left: 10%;
+}
+
+body {
+    padding-bottom: 70px;
+}
+
+.home-bg {
+    background: url('../images/background.jpg') center/cover fixed;
+    min-height: calc(100vh - 140px);
+}
+
+.bg-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.card-img-top {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.navbar.fixed-bottom {
+    background: linear-gradient(to right, #2200ff, #1a1a1a);
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.navbar.fixed-bottom .navbar-text {
+    color: white !important;
+}
+
+.textShadowWhite{
+    text-shadow: 1px 1px 3px white;
+}
