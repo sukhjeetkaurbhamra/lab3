@@ -1,4 +1,4 @@
-/* app.css */
+/* style.css */
 
 .custom-navbar {
     background: linear-gradient(to right, #1a1a1a, #2200ff);
@@ -88,4 +88,101 @@ body {
 
 .textShadowWhite{
     text-shadow: 1px 1px 3px white;
+}
+
+/* Blog Page Styles */
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2200ff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.blog-title::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #1a1a1a, #2200ff);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.blog-card {
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card .card {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover .card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    width: 100% !important;
+}
+
+.blog-card:hover .blog-card-img {
+    transform: scale(1.05);
+}
+
+.blog-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2200ff;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+.blog-card-text {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#loadingSpinner {
+    padding: 3rem 0;
+}
+
+@media (max-width: 767.98px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .blog-card-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .blog-title {
+        font-size: 1.75rem;
+    }
+    
+    .blog-card-img {
+        height: 160px;
+    }
 }

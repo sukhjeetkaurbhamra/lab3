@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - WEBD 6201</title>
-    
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Blog - WEBD 6201 Lab 3</title>
     
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -33,17 +31,17 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="blog.html">
-                            <i class="fas fa-home"></i> Blog
+                        <a class="nav-link px-3 active" href="blog.html">
+                            <i class="fas fa-blog"></i> Blog
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="products.html">
-                            <i class="fas fa-project-diagram"></i> Products
+                            <i class="fas fa-project-diagram"></i> Interests
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3 active" href="services.html">
+                        <a class="nav-link px-3" href="services.html">
                             <i class="fas fa-cogs"></i> Services
                         </a>
                     </li>
@@ -69,12 +67,31 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Content will be injected by JavaScript -->
+        <div class="container mt-4">
+            <h1 class="text-center blog-title mb-5">Latest Blog Posts</h1>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Loading spinner -->
+                    <div id="loadingSpinner" class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Loading blog posts...</p>
+                    </div>
+                    
+                    <!-- Blog posts container -->
+                    <div id="blogContainer" class="d-flex flex-wrap justify-content-center">
+                        <!-- Blog posts will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- JavaScript Section -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts/app.js"></script>
+    <script src="./scripts/blog.js"></script>
 </body>
 </html>
